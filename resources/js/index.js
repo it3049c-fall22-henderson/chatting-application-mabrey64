@@ -2,6 +2,7 @@ const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
 const chatBox = document.getElementById("chat");
 const nameInput = document.getElementById("my-name-input");
+const save = document.getElementById("save")
 
 async function updateMessages() {
   const messages = await fetchMessages();
@@ -76,3 +77,14 @@ sendButton.addEventListener("click", function (sendButtonClickEvent) {
   sendMessages(sender, message);
   myMessage.value = "";
 });
+
+save.onclick = function () {
+  localStorage.setItem("my-name-input", nameInput.value);
+  nameInput.value = "";
+}
+
+edit.onclick = function () {
+  const text = localStorage.getItem("my-name-input")
+  nameInput.value = text;
+}
+
