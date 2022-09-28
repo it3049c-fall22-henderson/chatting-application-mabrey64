@@ -19,15 +19,15 @@ describe(`Chatting Logic`, function () {
   beforeEach(() => {
     document.documentElement.innerHTML = html.toString();
   });
-  
+
   afterEach(() => {
     // restore the original func after test
     jest.resetModules();
   });
 
-  it.skip(`works`, function() { // TODO: Fix those tests
-    // updateMessagesMock();
-    // expect(fetchMessagesMock).toBeCalled();
-    // expect(formatMessageMock).toBeCalled();
+  it.skip(`works`, function () { // TODO: Fix those tests
+    //     updateMessagesMock();
+    //     expect(fetchMessagesMock).toBeCalled();
+    //     expect(formatMessageMock).toBeCalled();
   });
 });

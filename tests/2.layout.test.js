@@ -20,7 +20,7 @@ describe(`html content`, function () {
     jest.resetModules();
   });
 
-  test(`body includes a jumbotron div with an h1`, function() {
+  test(`body includes a jumbotron div with an h1`, function () {
     const jumbotron = document.querySelector(`body > header > .jumbotron`);
     const jumbotronH1 = jumbotron.querySelector(`h1`);
 
@@ -29,7 +29,7 @@ describe(`html content`, function () {
     expect(jumbotronH1).toHaveClass(`display-4`);
   });
 
-  test(`jumbotron div includes input field for the name`, function() {
+  test(`jumbotron div includes input field for the name`, function () {
     const jumbotron = document.querySelector(`body > header > .jumbotron`);
     const outerDiv = jumbotron.querySelector(`div`);
     const input = jumbotron.querySelector(`input`);
