@@ -119,3 +119,7 @@ footer {
   background: white;
   border-bottom-left-radius: 10px;
 }
+
+.dark{
+  background-color: #222;
+}

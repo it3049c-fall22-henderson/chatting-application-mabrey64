@@ -17,6 +17,7 @@
 <body>
     <header>
         <div class="jumbotron">
+            <button onclick="switchModes()">Dark Mode</button>
             <h1 class="display-4">IT-3049C Chat</h1>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -79,7 +80,7 @@
 
     <footer>
         <div id="chatbar" class="input-group mb-3">
-            <input type="text" id="my-message" class="form-control" placeholder="Type a message ...">
+            <input type="text" id="my-message" class="form-control" placeholder="Type a message ..." disabled>
             <div class="input-group-append">
                 <button class="btn btn-outline-primary" id="send-button" type="button">Send</button>
             </div>

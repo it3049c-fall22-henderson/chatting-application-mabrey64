@@ -7,7 +7,6 @@ const save = document.getElementById("save")
 async function updateMessages() {
   const messages = await fetchMessages();
   let formattedMessages = "";
-  debugger
   messages.forEach(message => {
     formattedMessages += formatMessage(message, nameInput.value);
   });
@@ -78,9 +77,11 @@ sendButton.addEventListener("click", function (sendButtonClickEvent) {
   myMessage.value = "";
 });
 
+
 save.onclick = function () {
   localStorage.setItem("my-name-input", nameInput.value);
   nameInput.value = "";
+  document.getElementById("my-message").disabled = false;
 }
 
 edit.onclick = function () {
@@ -88,3 +89,7 @@ edit.onclick = function () {
   nameInput.value = text;
 }
 
+function switchModes() {
+  var element = document.body;
+  element.classList.toggle("dark");
+}
